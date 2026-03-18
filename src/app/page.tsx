@@ -42,10 +42,26 @@ const whyJepnik = [
 ];
 
 const quickLinks = [
-  "Bitumen Products",
-  "Safety Products",
-  "Civil Contracting",
-  "Site Evaluation & Consulting",
+  {
+    title: "Bitumen Products",
+    href: "/products/bitumen-road-surfacing",
+    description: "Road surfacing materials for infrastructure and maintenance work.",
+  },
+  {
+    title: "Safety Products",
+    href: "/products/safety-ppe",
+    description: "PPE and safety supply for contractors, teams and operational sites.",
+  },
+  {
+    title: "Civil Contracting",
+    href: "/services/civil-contracting",
+    description: "Execution-focused support for road-related and civil works projects.",
+  },
+  {
+    title: "Site Evaluation & Consulting",
+    href: "/services/site-evaluation-consulting",
+    description: "Practical early-stage guidance before project delivery begins.",
+  },
 ];
 
 export default function Home() {
@@ -114,9 +130,19 @@ export default function Home() {
           title="Practical solutions for supply, contracting and site safety"
           intro="Jepnik Investments is a Zimbabwean business focused on bitumen and road surfacing products, civil contracting services, road marking and maintenance, and safety product supply. We serve clients who need dependable support, clear communication, and practical delivery aligned with real project requirements."
         >
-          <p className="max-w-3xl text-lg leading-8 text-[var(--muted)]">
-            Whether the need is product supply, contract work, or safety equipment, Jepnik&apos;s goal is to make it easier for clients to move from enquiry to execution with confidence.
-          </p>
+          <div className="grid gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-start">
+            <p className="max-w-3xl text-lg leading-8 text-[var(--muted)]">
+              Whether the need is product supply, contract work, or safety equipment, Jepnik&apos;s goal is to make it easier for clients to move from enquiry to execution with confidence.
+            </p>
+            <div className="rounded-[1.75rem] bg-[var(--surface)] p-6">
+              <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[var(--brand-gold-deep)]">Positioning focus</p>
+              <ul className="mt-4 space-y-3 text-sm leading-7 text-[var(--muted)]">
+                <li>Clear separation between services and products</li>
+                <li>Stronger trust signals for procurement and corporate buyers</li>
+                <li>Faster route from interest to quote request</li>
+              </ul>
+            </div>
+          </div>
         </PageSection>
 
         <PageSection
@@ -165,9 +191,15 @@ export default function Home() {
         >
           <div className="grid gap-4 sm:grid-cols-2">
             {quickLinks.map((item) => (
-              <div key={item} className="rounded-[1.5rem] border border-[var(--brand-gold)]/30 bg-[linear-gradient(180deg,rgba(244,199,0,0.08),rgba(255,255,255,1))] p-6">
-                <p className="text-lg font-semibold text-[var(--foreground)]">{item}</p>
-              </div>
+              <Link
+                key={item.title}
+                href={item.href}
+                className="rounded-[1.5rem] border border-[var(--brand-gold)]/30 bg-[linear-gradient(180deg,rgba(244,199,0,0.08),rgba(255,255,255,1))] p-6 shadow-[0_12px_30px_rgba(2,2,18,0.05)] transition hover:-translate-y-0.5 hover:border-[var(--brand-orange)]/40"
+              >
+                <p className="text-lg font-semibold text-[var(--foreground)]">{item.title}</p>
+                <p className="mt-3 text-sm leading-7 text-[var(--muted)]">{item.description}</p>
+                <p className="mt-5 text-sm font-semibold text-[var(--brand-orange)]">Learn more →</p>
+              </Link>
             ))}
           </div>
         </PageSection>

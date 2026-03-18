@@ -41,9 +41,10 @@ export function SiteShell({ children }: SiteShellProps) {
                 <Link
                   key={item.href}
                   href={item.href}
+                  aria-current={active ? "page" : undefined}
                   className={`rounded-full px-4 py-2 transition ${
                     active
-                      ? "bg-[var(--brand-black)] text-white"
+                      ? "bg-[var(--brand-black)] !text-white shadow-[0_10px_24px_rgba(2,2,18,0.18)]"
                       : "text-[var(--foreground)] hover:bg-[var(--surface-alt)] hover:text-[var(--brand-orange)]"
                   }`}
                 >

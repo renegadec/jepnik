@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { PageHero } from "@/components/page-hero";
 import { PageSection } from "@/components/page-section";
 import { SiteShell } from "@/components/site-shell";
@@ -23,12 +24,18 @@ export default function ProductsPage() {
             <p className="mt-4 text-base leading-7 text-[var(--muted)]">
               Bitumen, emulsions, and related materials for road works, maintenance, and infrastructure support projects.
             </p>
+            <Link href="/products/bitumen-road-surfacing" className="mt-6 inline-flex text-sm font-semibold text-[var(--brand-orange)] transition hover:text-[var(--brand-navy)]">
+              Learn more →
+            </Link>
           </article>
           <article className="card">
             <h2 className="text-2xl font-semibold text-[var(--foreground)]">Safety & PPE Products</h2>
             <p className="mt-4 text-base leading-7 text-[var(--muted)]">
               Protective wear, footwear, accessories, and site safety products for teams operating in active environments.
             </p>
+            <Link href="/products/safety-ppe" className="mt-6 inline-flex text-sm font-semibold text-[var(--brand-orange)] transition hover:text-[var(--brand-navy)]">
+              Learn more →
+            </Link>
           </article>
         </div>
       </PageSection>

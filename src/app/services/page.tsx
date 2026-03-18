@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { PageHero } from "@/components/page-hero";
 import { PageSection } from "@/components/page-section";
 import { SiteShell } from "@/components/site-shell";
@@ -28,12 +29,24 @@ export default function ServicesPage() {
 
       <PageSection label="Service areas" title="Practical support from planning to delivery" muted>
         <div className="grid gap-6 lg:grid-cols-3">
-          {services.map((service) => (
-            <article key={service.title} className="card h-full">
-              <h2 className="text-2xl font-semibold text-[var(--foreground)]">{service.title}</h2>
-              <p className="mt-4 text-base leading-7 text-[var(--muted)]">{service.body}</p>
-            </article>
-          ))}
+          {services.map((service) => {
+            const href =
+              service.title === "Civil Contracting"
+                ? "/services/civil-contracting"
+                : service.title === "Road Marking & Maintenance"
+                  ? "/services/road-marking-maintenance"
+                  : "/services/site-evaluation-consulting";
+
+            return (
+              <article key={service.title} className="card h-full">
+                <h2 className="text-2xl font-semibold text-[var(--foreground)]">{service.title}</h2>
+                <p className="mt-4 text-base leading-7 text-[var(--muted)]">{service.body}</p>
+                <Link href={href} className="mt-6 inline-flex text-sm font-semibold text-[var(--brand-orange)] transition hover:text-[var(--brand-navy)]">
+                  Learn more →
+                </Link>
+              </article>
+            );
+          })}
         </div>
       </PageSection>
 

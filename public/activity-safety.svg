@@ -1,0 +1,7 @@
+<svg width="900" height="700" viewBox="0 0 900 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="700" fill="#f2f4f7"/>
+  <rect y="485" width="900" height="215" fill="#9ba8b2"/>
+  <path d="M250 480C250 397.157 317.157 330 400 330H465V480H250Z" fill="#ef8121"/>
+  <rect x="480" y="240" width="145" height="240" fill="#f2c300"/>
+  <rect x="640" y="180" width="125" height="300" fill="#20384d"/>
+</svg>

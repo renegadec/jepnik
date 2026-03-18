@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Jepnik Investments | Bitumen Supply, Civil Contracting & Safety Products",
   description:
-    "Jepnik Investments supports public and private sector projects in Zimbabwe with bitumen supply, civil contracting, road marking solutions, and safety products.",
+    "Jepnik Investments supports public and private sector projects with road surfacing products, civil contracting services, road marking solutions, and safety product supply in Zimbabwe.",
 };
 
 export default function RootLayout({
@@ -25,9 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>
     </html>

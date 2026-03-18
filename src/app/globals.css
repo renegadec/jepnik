@@ -1,18 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #102744;
-  --color-surface: #ffffff;
-  --color-wash: #f5f8fa;
-  --color-line: #dbe4ea;
-  --color-ink: #102744;
-  --color-slate: #536579;
-  --color-navy: #102744;
-  --color-gold: #efc94c;
-  --color-gold-soft: #ffe49a;
-  --color-orange: #ef8121;
-  --color-orange-deep: #d46c12;
+  --background: #f8f7f2;
+  --foreground: #141b26;
+  --muted: #5d6672;
+  --surface: #f4efe3;
+  --surface-alt: #f2f4f7;
+  --brand-black: #020212;
+  --brand-navy: #1c486f;
+  --brand-orange: #ef8121;
+  --brand-gold: #f4c700;
+  --brand-gold-soft: #f7d94c;
+  --brand-gold-deep: #9a7800;
 }
 
 @theme inline {
@@ -37,45 +36,23 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-.section-kicker {
-  color: var(--color-orange);
-  font-size: 0.82rem;
+.section-label {
+  font-size: 0.8rem;
   font-weight: 700;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.28em;
   text-transform: uppercase;
+  color: var(--brand-gold-deep);
 }
 
 .section-title {
-  margin-top: 0.75rem;
   max-width: 14ch;
-  color: var(--color-navy);
-  font-size: clamp(2rem, 3vw, 3.3rem);
-  line-height: 1.08;
+  font-size: clamp(2rem, 4vw, 3.5rem);
   font-weight: 600;
+  line-height: 1.05;
   letter-spacing: -0.04em;
-}
-
-.form-input {
-  width: 100%;
-  border: 1px solid var(--color-line);
-  border-radius: 1rem;
-  background: #fff;
-  padding: 0.95rem 1rem;
-  color: var(--color-navy);
-  outline: none;
-  transition: border-color 160ms ease, box-shadow 160ms ease;
-}
-
-.form-input::placeholder {
-  color: #7d8a96;
-}
-
-.form-input:focus {
-  border-color: color-mix(in srgb, var(--color-orange) 50%, white);
-  box-shadow: 0 0 0 4px color-mix(in srgb, var(--color-orange) 14%, white);
 }

@@ -66,16 +66,16 @@ export default function Home() {
     <SiteShell>
       <main>
         <section className="bg-[var(--brand-black)] text-white">
-          <div className="mx-auto grid max-w-[1600px] lg:min-h-[78vh] lg:grid-cols-[0.95fr_1.05fr]">
-            <div className="flex items-center bg-[var(--brand-black)] px-6 py-18 lg:px-10 xl:px-16">
-              <div className="mx-auto max-w-2xl lg:mx-0">
+          <div className="mx-auto grid max-w-[1680px] lg:min-h-[82vh] lg:grid-cols-[0.92fr_1.08fr]">
+            <div className="flex items-center bg-[var(--brand-black)] px-6 py-20 lg:px-12 xl:px-18">
+              <div className="mx-auto max-w-[34rem] lg:mx-0">
                 <p className="text-sm font-semibold uppercase tracking-[0.34em] text-[var(--brand-gold)]">
                   Zimbabwe • Infrastructure • Road Works
                 </p>
-                <h1 className="mt-6 text-5xl font-semibold leading-[0.94] tracking-[-0.05em] text-white sm:text-6xl xl:text-7xl">
+                <h1 className="mt-6 text-5xl font-semibold leading-[0.92] tracking-[-0.055em] text-white sm:text-6xl xl:text-[5.3rem]">
                   Reliable support for construction, maintenance and transport infrastructure needs.
                 </h1>
-                <p className="mt-7 max-w-xl text-lg leading-8 text-white/76 sm:text-xl">
+                <p className="mt-7 max-w-xl text-lg leading-8 text-white/74 sm:text-xl">
                   Jepnik Investments supplies bitumen and road surfacing products, supports civil contracting requirements, and provides safety-focused solutions for public and private sector projects.
                 </p>
                 <div className="mt-10 flex flex-col gap-4 sm:flex-row">
@@ -89,7 +89,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="relative min-h-[340px] lg:min-h-full">
+            <div className="relative min-h-[360px] lg:min-h-full">
               <Image
                 src="/hero-infrastructure.svg"
                 alt="Stylised infrastructure illustration"
@@ -97,6 +97,7 @@ export default function Home() {
                 priority
                 className="object-cover"
               />
+              <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(2,2,18,0.08),transparent_28%)]" />
             </div>
           </div>
         </section>
@@ -132,7 +133,7 @@ export default function Home() {
               <p className="section-label">Our activities</p>
               <h2 className="section-title mt-4">Support built around practical infrastructure and site needs</h2>
               <p className="mt-6 text-lg leading-8 text-[var(--muted)]">
-                Like the strongest transport and infrastructure websites, Jepnik should make its key activities feel clear, visual, and easy to scan.
+                The key activities should feel visual, structured and clear — with strong image-led sections that explain what Jepnik does without forcing users through walls of text.
               </p>
             </div>
 
@@ -144,11 +145,11 @@ export default function Home() {
                 return (
                   <article
                     key={activity.title}
-                    className={`grid overflow-hidden rounded-[2rem] bg-white shadow-[0_18px_40px_rgba(2,2,18,0.07)] lg:grid-cols-2 ${
+                    className={`grid overflow-hidden rounded-[2.2rem] bg-white shadow-[0_22px_46px_rgba(2,2,18,0.08)] lg:grid-cols-[1.08fr_0.92fr] ${
                       reverse ? "lg:[&>*:first-child]:order-2" : ""
                     }`}
                   >
-                    <div className="relative min-h-[300px] lg:min-h-[420px]">
+                    <div className="relative min-h-[320px] lg:min-h-[470px]">
                       <Image
                         src={activity.image}
                         alt={activity.title}
@@ -157,7 +158,7 @@ export default function Home() {
                       />
                     </div>
                     <div
-                      className={`flex items-center px-8 py-10 lg:px-12 ${
+                      className={`flex items-center px-8 py-12 lg:px-12 xl:px-14 ${
                         dark
                           ? "bg-[var(--brand-black)] text-white"
                           : "bg-white text-[var(--foreground)]"
@@ -169,13 +170,13 @@ export default function Home() {
                             dark ? "text-[var(--brand-gold)]" : "text-[var(--brand-gold-deep)]"
                           }`}
                         >
-                          Activity {index + 1}
+                          Our activities
                         </p>
-                        <h3 className="mt-5 text-3xl font-semibold tracking-tight sm:text-4xl">
+                        <h3 className="mt-5 text-3xl font-semibold leading-tight tracking-[-0.04em] sm:text-4xl xl:text-[2.8rem]">
                           {activity.title}
                         </h3>
                         <p
-                          className={`mt-5 text-base leading-8 ${
+                          className={`mt-6 max-w-lg text-base leading-8 ${
                             dark ? "text-white/74" : "text-[var(--muted)]"
                           }`}
                         >
@@ -183,7 +184,7 @@ export default function Home() {
                         </p>
                         <Link
                           href={activity.href}
-                          className={`mt-8 inline-flex text-sm font-semibold ${
+                          className={`mt-10 inline-flex text-sm font-semibold ${
                             dark ? "text-[var(--brand-gold)]" : "text-[var(--brand-orange)]"
                           }`}
                         >

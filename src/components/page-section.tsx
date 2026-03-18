@@ -11,7 +11,7 @@ type PageSectionProps = {
 export function PageSection({ label, title, intro, children, muted = false }: PageSectionProps) {
   return (
     <section className={muted ? "bg-[var(--surface-alt)]" : "bg-white"}>
-      <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+      <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-24">
         {(label || title || intro) && (
           <div className="max-w-3xl">
             {label ? <p className="section-label">{label}</p> : null}
@@ -19,7 +19,7 @@ export function PageSection({ label, title, intro, children, muted = false }: Pa
             {intro ? <p className="mt-6 text-lg leading-8 text-[var(--muted)]">{intro}</p> : null}
           </div>
         )}
-        <div className={label || title || intro ? "mt-10" : ""}>{children}</div>
+        <div className={label || title || intro ? "mt-12" : ""}>{children}</div>
       </div>
     </section>
   );

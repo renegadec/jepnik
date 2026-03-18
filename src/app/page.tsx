@@ -221,7 +221,7 @@ export default function Home() {
         </section>
 
         <section className="bg-[var(--brand-gold)] py-20 text-[var(--brand-black)]">
-          <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-[1fr_0.8fr] lg:px-8 lg:items-center">
+          <div className="relative mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-[1fr_0.8fr] lg:px-8 lg:items-center">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.28em] text-black/70">Contact Jepnik</p>
               <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-5xl">

@@ -67,8 +67,8 @@ export default function Home() {
       <main>
         <section className="bg-[var(--brand-black)] text-white">
           <div className="mx-auto grid max-w-[1680px] lg:min-h-[82vh] lg:grid-cols-[0.92fr_1.08fr]">
-            <div className="flex items-center bg-[var(--brand-black)] px-6 py-20 lg:px-12 xl:px-18">
-              <div className="mx-auto max-w-[34rem] lg:mx-0">
+            <div className="hero-panel hero-divider flex items-center bg-[var(--brand-black)] px-6 py-20 lg:px-12 xl:px-18">
+              <div className="mx-auto max-w-[32rem] lg:mx-0">
                 <p className="text-sm font-semibold uppercase tracking-[0.34em] text-[var(--brand-gold)]">
                   Zimbabwe • Infrastructure • Road Works
                 </p>
